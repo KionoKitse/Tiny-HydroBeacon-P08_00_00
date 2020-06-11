@@ -9,7 +9,6 @@
 
 const int led_pin = 13;
 const int receive_pin = 9;
-const int transmit_en_pin = 3;
 
 void setup()
 {
@@ -19,8 +18,6 @@ void setup()
 
   // Initialise the IO and ISR
   vw_set_rx_pin(receive_pin);
-  vw_set_ptt_pin(transmit_en_pin);
-  vw_set_ptt_inverted(true); // Required for DR3100
   vw_setup(300);  // Bits per sec
 
   vw_rx_start();       // Start the receiver PLL running
