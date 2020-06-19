@@ -41,14 +41,24 @@ A wireless soil moisture sensor for house plants
  * 2020-06-09 Got sample VirtualWire sketch working needed to use 300 bits/sec
  * 2020-06-11 Sending a message using CSV formatting
  * 2020-06-11 Testing ATtiny85 at 1MHz (Works) 
- * 2020-06-11 Reading the battery level
+ * 2020-06-11 Reading the battery level test (Successful)
+ * 2020-06-13 Looking for power sources LiPo looks interesting
+ * 2020-06-13 CR2477 > LIR2477 battery looks interesting charging might be an issue
+ * 2020-06-13 Each sensor will require a 433MHz transmitter might be an issue since I won't need a bunch of receivers
+ * 2020-06-14 Considering design ideas
+ * 2020-06-14 P08_01_00 might be possible without a transmitter but how to program individually and adjust
+ * 2020-06-17 Testing transmission ranges ~one room no walls
+ * 2020-06-18 Testing power usage for power source 0.8174sec @ ~200mA  -> 200mA * 0.8174(1 per hr)/(60*60) -> 0.4541 mAh
  
 ### What's next
- * Testing transmission ranges
  * Determine battery usage
  * Decide on power source
  * Mechanical design
  * Testing soil sensor
+ * Order battery
+ * Battery charging
+ * Sleep mode
+ 
  
 ### Notebook
  * Battery life could be extended if the system only started transmitting a signal if the soil moisture level was low.
@@ -58,6 +68,8 @@ A wireless soil moisture sensor for house plants
  * ATtiny85 and 433MHz tutorial that worked		https://www.instructables.com/id/Attiny85-RF-Transmitter-to-Arduino-Uno-Receiver-Ma/?utm_source=base&utm_medium=related-instructables&utm_campaign=related_test
  * VirtualWire tutorial							https://www.pjrc.com/teensy/td_libs_VirtualWire.html
  * A library for reading VCC level directly		https://github.com/cano64/ArduinoSystemStatus
+ * A library to put ATtiny85 to sleep			https://www.reddit.com/r/arduino/comments/6bf6go/i_wrote_a_library_to_put_an_attiny254585_to_deep/
+ * Battery life calculator						https://www.omnicalculator.com/other/battery-life
 
 ### Additional tasks
  * Tutorial for programming ATtiny85 and pro mini
